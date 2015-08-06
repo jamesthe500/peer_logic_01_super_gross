@@ -1,0 +1,16 @@
+We will need 3 json files with lists of the words needed for each of the blanks.
+one word type per json
+ajax call them into 3 arrays at the load of the page.
+
+On click of a very large button in the center of the page (pre written on index.html):
+generate a random number for each array to use as an index to each array.
+
+    replace the button using .html with ( append 3 divs inline that each have their chosen word )
+
+    using 3 separate functions that each slice off from their arrays. append the three words to the DOM in very large text each in their own div inline.
+
+
+on the click of any word, it will slide down and be replaced by a slid-up new word of the category via the 3 previously mentioned functions.
+
+If we run out of words- alert a link to therapy.
+
