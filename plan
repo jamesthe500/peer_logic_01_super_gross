@@ -1,9 +1,9 @@
-We will need 3 json files with lists of the words needed for each of the blanks.
-one word type per json
-ajax call them into 3 arrays at the load of the page.
+V We will need 3 json files with lists of the words needed for each of the blanks.
+V one word type per json
+V ajax call them into 3 arrays at the load of the page.
 
 On click of a very large button in the center of the page (pre written on index.html):
-generate a random number for each array to use as an index to each array.
+O  generate a random number for each array to use as an index to each array.
 
     replace the button using .html with ( append 3 divs inline that each have their chosen word )
 
