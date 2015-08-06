@@ -1,7 +1,7 @@
 {
-  word1: {
-    "ultra-",
-    "mega-",
+  "metaAdj": [
+    "ultra -",
+    "mega -",
     "super ",
     "very ",
     "grand 'ol ",
@@ -14,5 +14,5 @@
     "vastly ",
     "spitefully ",
     "stubbornly "
-  }
+  ]
 }
