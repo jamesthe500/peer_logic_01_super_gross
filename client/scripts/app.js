@@ -14,9 +14,8 @@ function randomWord(array){
 }
 
 function calcWidth (){
-    console.log("w1 wid: " + $('.w1').width());
-
-    console.log("w1 css: " + $('.w1').css("width"));
+    // Improvement to fix the behavior when there's a hyphen or space:
+    // if the word being added contains a space or hyphen add pixels to the calculated width.
     totalTextWidth = $('.w1').width() + $('.w2').width() + $('.w3').width();
     var leftGutter = (screen.width - totalTextWidth)/2;
     var word2pos = leftGutter + $('.w1').width();

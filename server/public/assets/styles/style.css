@@ -14,7 +14,7 @@ body {
     top:0;
     left:0;
     margin: auto;
-
+    float: left;
 }
 
 div {
@@ -32,9 +32,11 @@ div {
 
 .w1 {
     color: #aa2222;
+
 }
 
 .w2 {
+
     color: #6d1606;
 }
 

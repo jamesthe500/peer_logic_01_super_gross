@@ -14,10 +14,10 @@ body {
     top:0;
     left:0;
     margin: auto;
-
+    float: left;
 }
 
-div, span {
+div {
 
     display: inline-block;
     margin: 5px;
@@ -32,9 +32,11 @@ div, span {
 
 .w1 {
     color: #aa2222;
+
 }
 
 .w2 {
+
     color: #6d1606;
 }
 

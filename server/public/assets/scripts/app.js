@@ -14,9 +14,7 @@ function randomWord(array){
 }
 
 function calcWidth (){
-    console.log("w1 wid: " + $('.w1').width());
-
-    console.log("w1 css: " + $('.w1').css("width"));
+    // if the word being added contains a space, hyphen, or apostrophy, add pixels to the calculated width.
     totalTextWidth = $('.w1').width() + $('.w2').width() + $('.w3').width();
     var leftGutter = (screen.width - totalTextWidth)/2;
     var word2pos = leftGutter + $('.w1').width();
@@ -67,7 +65,7 @@ $(document).ready(function(){
         var w1 = randomWord(word1);
         var w2 = randomWord(word2);
         var w3 = randomWord(word3);
-        $('.showCase').html('<span class="w1">' + w1 + ' </span><div class="w2">' + w2 + ' </div><div class="w3">' + w3 + '</div>');
+        $('.showCase').html('<div class="w1">' + w1 + ' </div><div class="w2">' + w2 + ' </div><div class="w3">' + w3 + '</div>');
         calcWidth();
     });
 
