@@ -1,3 +1,45 @@
+html {
+    font-family: Impact, Charcoal, sans-serif;
+
+}
+
+body {
+    background-color: #172f17;
+}
+
+.showCase {
+
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    top:0;
+    left:0;
+    margin: auto;
+    width: 800px;
+    height: 80px;
+}
+
 div {
-    color:red;
+
+    display: inline-block;
+    margin: 5px;
+    float: left;
+    font-size: 60px;
+}
+
+.w1 {
+    color: #aa2222;
+}
+
+.w2 {
+
+    color: #6d1606;
+}
+
+.w3 {
+    color: #aa0357;
+}
+
+.btn {
+    color: #006600;
 }
