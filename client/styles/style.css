@@ -8,18 +8,16 @@ body {
 }
 
 .showCase {
-
     position:absolute;
     bottom: 0;
     right: 0;
     top:0;
     left:0;
     margin: auto;
-    width: 800px;
-    height: 80px;
+
 }
 
-div {
+div, span {
 
     display: inline-block;
     margin: 5px;
@@ -27,12 +25,16 @@ div {
     font-size: 60px;
 }
 
+.w1, .w2, .w3 {
+    position: fixed;
+    top: 35%;
+}
+
 .w1 {
     color: #aa2222;
 }
 
 .w2 {
-
     color: #6d1606;
 }
 
@@ -42,4 +44,5 @@ div {
 
 .btn {
     color: #006600;
+    top: 25%;
 }

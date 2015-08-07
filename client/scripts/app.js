@@ -1,12 +1,29 @@
 var word1 = ["1"];
 var word2 = ["2"];
 var word3 = ["3"];
+var buttonHeight = "46px";
+var buttonWidth = "143px";
+var textHeight = "86px";
+
 
 
 function randomWord(array){
     var index = Math.floor(Math.random() * array.length);
     var chosenWord = array.splice(index, 1);
     return chosenWord;
+}
+
+function calcWidth (){
+    console.log("w1 wid: " + $('.w1').width());
+
+    console.log("w1 css: " + $('.w1').css("width"));
+    totalTextWidth = $('.w1').width() + $('.w2').width() + $('.w3').width();
+    var leftGutter = (screen.width - totalTextWidth)/2;
+    var word2pos = leftGutter + $('.w1').width();
+    var word3pos = word2pos + $('.w2').width();
+    $('.w1').animate({left: leftGutter - 15 + "px"}, 400);
+    $('.w2').animate({left: word2pos + "px"}, 400);
+    $('.w3').animate({left: word3pos + 15 + "px"}, 400);
 }
 
 $(document).ready(function(){
@@ -42,11 +59,16 @@ $(document).ready(function(){
         }
     }); //ajax3
 
+    $('.showCase').css("height", buttonHeight).css("width", buttonWidth);
+
     $('.btn').on('click', function(){
+        $('.showCase').css("height", textHeight);
+
         var w1 = randomWord(word1);
         var w2 = randomWord(word2);
         var w3 = randomWord(word3);
         $('.showCase').html('<div class="w1">' + w1 + ' </div><div class="w2">' + w2 + ' </div><div class="w3">' + w3 + '</div>');
+        calcWidth();
     });
 
     $('body').on('click', '.w2', function(){
@@ -55,8 +77,9 @@ $(document).ready(function(){
         }
         var newWord = randomWord(word2);
         $('.w2').slideUp(400, function(){
-            $('.w2').hide().text(newWord).slideDown(1000);
-            console.log(word1);
+            $('.w2').hide().text(newWord);
+            calcWidth();
+            $('.w2').slideDown(400);
         });
     });
 
@@ -66,8 +89,9 @@ $(document).ready(function(){
         }
         var newWord = randomWord(word1);
         $('.w1').slideUp(400, function(){
-            $('.w1').hide().text(newWord).slideDown(1000);
-            console.log(word1);
+            $('.w1').hide().text(newWord);
+            calcWidth();
+            $('.w1').slideDown(400);
         });
     });
 
@@ -77,9 +101,10 @@ $(document).ready(function(){
         }
         var newWord = randomWord(word3);
         $('.w3').slideUp(400, function(){
-            $('.w3').hide().text(newWord).slideDown(1000);
-            console.log(word1);
-        });
+            $('.w3').hide().text(newWord);
+            calcWidth();
+            $('.w3').slideDown(400);
+            });
     });
 
 }); //doc ready
